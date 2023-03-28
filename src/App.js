@@ -1,8 +1,8 @@
 import React from 'react';
 
 function App() {
-  const value = 'Rennie\'s site :D';
-  return <div>Hello {value}</div>;
+  const value = 'Rennie';
+  return <div>Hello <span style={{color: "red"}}>{value}'s</span> site :D</div>;
 }
 
 export default App;

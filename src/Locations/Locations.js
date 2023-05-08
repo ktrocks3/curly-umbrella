@@ -9,7 +9,7 @@ function Locations(props) {
                 <img
                     className="card-image"
                     src="https://source.unsplash.com/random"
-                    alt="Card Image"
+                    alt="Location"
                 />
             </div>
             <div className="card-footer">

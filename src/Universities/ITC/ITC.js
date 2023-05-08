@@ -28,7 +28,6 @@ function ITC(props) {
                     </button>
                 ))}
             </div>
-            <h1></h1>
         </div>
     );
 }

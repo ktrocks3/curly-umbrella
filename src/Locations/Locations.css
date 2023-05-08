@@ -1,0 +1,32 @@
+.card {
+    background-color: #06BCEA;
+    border-radius: 10%;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Adjust the ratio to fit the desired aspect ratio */
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-text {
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    float: left;
+}
+
+.footer {
+    display: flex;
+}
+
+.card-icon {
+    float: right;
+    align-self: center;
+    color: white;
+}

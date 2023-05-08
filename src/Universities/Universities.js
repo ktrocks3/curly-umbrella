@@ -3,6 +3,7 @@ import "./Universities.css";
 import Container from "../Container/Container";
 import Locations from "../Locations/Locations";
 import {faGraduationCap as cap} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 function Universities(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -40,23 +41,31 @@ function Universities(props) {
                 <div className="places">
                     <Locations
                         text="Vrijhof"
-                        photo={cap}
-                        onClick={() => handleLocationClick("Vrijhof")}
+                        ico={cap}
+                        photo="/vrijhof-1.jpg"
+                        // onClick={() => handleLocationClick("Vrijhof")}
+                        inactive={true}
                     />
                     <Locations
                         text="ITC"
-                        photo={cap}
+                        ico={cap}
                         onClick={() => handleLocationClick("ITC")}
+                        photo="/ict.jpg"
+
                     />
                     <Locations
                         text="Spiegel"
-                        photo={cap}
-                        onClick={() => handleLocationClick("Spiegel")}
+                        ico={cap}
+                        // onClick={() => handleLocationClick("Spiegel")}
+                        photo="/spiegel.jpeg"
+                        inactive={true}
                     />
                     <Locations
                         text="Horst"
-                        photo={cap}
-                        onClick={() => handleLocationClick("Horst")}
+                        ico={cap}
+                        // onClick={() => handleLocationClick("Horst")}
+                        photo="/horst.jpg"
+                        inactive={true}
                     />
                 </div>
             </Container>
@@ -64,7 +73,19 @@ function Universities(props) {
                 <div className="popup-overlay" onClick={handleClose}>
                     <div className="popup">
                         <h2>{selectedLocation}</h2>
-                        <p>This is the popup content for {selectedLocation}.</p>
+                        <p>
+                            ITC, the Faculty of Geo-Information Science and Earth Observation, has moved to the campus.
+                        </p>
+                        <p>
+                            The courtyard gardens in the new building are particularly popular. The renovated Langezijds
+                            has 'green lungs': inside the building are gardens, surrounded by study and work areas. The
+                            indoor gardens are not just there for decoration, but also help with natural ventilation.
+                            Rainwater is also collected, which is used to water the plants in the inner gardens.
+
+                        </p>
+                        <img src="/ict.jpg" className="popup-photo" alt="ITC"></img>
+                        <Link to={"/universities/" + selectedLocation} className="popup-Button"> Teleport there
+                            now!</Link>
                     </div>
                 </div>
             )}

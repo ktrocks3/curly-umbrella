@@ -9,9 +9,11 @@
 
 .card-image {
     width: 100%;
+    aspect-ratio: 1200/800;
     object-fit: cover;
     object-position: center;
 }
+
 
 .card-text {
     color: white;
@@ -29,4 +31,9 @@
     float: right;
     align-self: center;
     color: white;
+}
+
+.inactive {
+    opacity: 0.5;
+    background-color: gray;
 }

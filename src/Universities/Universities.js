@@ -3,6 +3,7 @@ import "./Universities.css";
 import Container from "../Container/Container";
 import Locations from "../Locations/Locations";
 import {faGraduationCap as cap} from "@fortawesome/free-solid-svg-icons";
+import Button from "../Buttons/Button";
 import {Link} from "react-router-dom";
 
 function Universities(props) {
@@ -83,9 +84,17 @@ function Universities(props) {
                             Rainwater is also collected, which is used to water the plants in the inner gardens.
 
                         </p>
-                        <img src="/ict.jpg" className="popup-photo" alt="ITC"></img>
-                        <Link to={"/universities/" + selectedLocation} className="popup-Button"> Teleport there
-                            now!</Link>
+                        <div className="photoBox">
+                            <img src="/ict.jpg" className="popup-photo" alt="ITC"></img>
+                        </div>
+                        <br/>
+                        <div className="photoBox">
+                        <Button
+                            to={"/universities/" + selectedLocation}
+                            active="true"
+                            className="popup-photo"
+                            text="Teleport there now!"/>
+                        </div>
                     </div>
                 </div>
             )}

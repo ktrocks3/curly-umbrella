@@ -4,7 +4,6 @@ import Container from "../Container/Container";
 import Locations from "../Locations/Locations";
 import {faGraduationCap as cap} from "@fortawesome/free-solid-svg-icons";
 import Button from "../Buttons/Button";
-import {Link} from "react-router-dom";
 
 function Universities(props) {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
